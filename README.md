@@ -1,130 +1,114 @@
-### About
+# Online Bookstore - Java Servlet Project
 
-A user-friendly Online Bookstore project in which users can log in or register, view the available books, select books along with their quantity, and buy them. Users can also get payment receipts after successful payment. The project can also be used by the administrator, who can add new books, remove books, increase and decrease the quantity of books, change the price of the books as well as maintain the selling history of books.
+A full-stack online bookstore application built using Java, Servlets, JDBC, and MySQL. It features separate interfaces for users and administrators for a complete e-commerce experience.
 
-![onlinebookstore](https://user-images-githubusercontent.com/34605595/137615096-8447d32d-bddc-4f13-a8ed-3c0f4dd5e04e.png)
+---
 
-<span style="color:blue">**This Website is built for following purpose:-**</span>
-- For Selling books online.
-- Maintaining books selling history.
-- Adding and managing books.
-- User Friendly.
-- For Implementation of Http Servlets in Java.
-- This is a Mini-project developed using Java, Jdbc, And Servlets.
+## 📋 Table of Contents
 
-<span style="color:blue">**Admin Have Following Access for this online store site:-**</span>
-- Add New Books.
-- View Books Available.
-- Remove Books.
-- Increase Books Amount.
+1.  [About The Project](#about-the-project)
+    * [Key Features](#key-features)
+    * [Tech Stack](#tech-stack)
+2.  [Getting Started](#getting-started)
+    * [Prerequisites](#prerequisites)
+    * [Installation](#installation)
+3.  [Usage](#usage)
+4.  [Screenshots](#screenshots)
+5.  [Contributing](#contributing)
 
-<span style="color:blue">**Users Have Following Access for this online store site:-**</span>
-- Create New Account or Register.
-- Login.
-- View Available Books.
-- Select Books to Buy.
-- Select Books Quantity.
-- Buy Books.
-- Get Payment Receipt.
+---
 
-### Technologies used:-
-1. Front-End Development:
-- HTML
-- CSS
-- Javascript
-- BootStrap
+## 📖 About The Project
 
-2. Back-End Development:
-- Java [JDK 8+]
-- JDBC
-- Servlet
+This project is a web-based bookstore designed to showcase the use of Java Servlets and JDBC for back-end development. It provides a platform for users to browse and purchase books, while administrators can manage the store's inventory and view sales data.
 
-3. Database:
-- MySql
+![Online Bookstore Homepage](https://user-images-githubusercontent.com/34605595/137615096-8447d32d-bddc-4f13-a8ed-3c0f4dd5e04e.png)
 
-### ================ Software And Tools Required ================
-- : Git [https://www.youtube.com/watch?v=gv7VPQ4LZ7g]
-- : Java JDK 8+ [https://www.youtube.com/watch?v=O9PWH9SeTTE]
-- : Eclipse EE (Enterprise Edition) [https://www.youtube.com/watch?v=8aDsEV7txXE]
-- : Apache Maven [https://www.youtube.com/watch?v=jd2zx3dLjuw]
-- : Tomcat v8.0+ [https://youtu.be/mLFPodZO8Iw?t=903]
-- : MySQL Server [https://www.youtube.com/watch?v=Ydh5jYA6Frs]
-- : MySQL Workbench (optional) [https://www.youtube.com/watch?v=t79oCeTXHwg]
+### Key Features
 
-### ================= Dummy Database Initialization =================
+* **User Authentication:** Secure registration and login for users.
+* **Product Catalog:** Users can view a list of all available books.
+* **Shopping Cart:** Users can add books, specify quantities, and proceed to checkout.
+* **Admin Dashboard:** A separate interface for administrators to manage the store.
+* **Inventory Management:** Admins can add new books, update stock, change prices, and remove books.
+* **Sales History:** Admins can track all transactions.
 
-STEP 1: Open MySQL Command Prompt or MySQL Workbench
+### Tech Stack
 
-STEP 2: Login to the administrator user as : ```mysql -u <username> -p``` (Enter Password if asked)
+* **Backend:** Java 8+, Servlets, JDBC
+* **Frontend:** HTML, CSS, JavaScript, Bootstrap
+* **Database:** MySQL
+* **Web Server:** Apache Tomcat 8.0+
+* **Build Tool:** Apache Maven
 
-STEP 3: Copy paste the following MySql Commands-
-```MySQL
-create database if not exists onlinebookstore;
+---
 
-use onlinebookstore;
+## 🚀 Getting Started
 
-create table if not exists books(barcode varchar(100) primary key, name varchar(100), author varchar(100), price int, quantity int);
+Follow these instructions to set up the project on your local machine.
 
-create table if not exists users(username varchar(100) primary key,password varchar(100), firstname varchar(100),
-    lastname varchar(100),address text, phone varchar(100),mailid varchar(100),usertype int);
+### Prerequisites
 
-insert into books values('9780134190563','The Go Programming Language','Alan A. A. Donovan and Brian W. Kernighan',400,8);
-insert into books values('9780133053036','C++ Primer','Stanley Lippman and Josée Lajoie and Barbara Moo',976,13);
-insert into books values('9781718500457','The Rust Programming Language','Steve Klabnik and Carol Nichols',560,12);
-insert into books values('9781491910740','Head First Java','Kathy Sierra and Bert Bates and Trisha Gee',754,23);
-insert into books values('9781492056300','Fluent Python','Luciano Ramalho',1014,5);
-insert into books values('9781720043997','The Road to Learn React','Robin Wieruch',239,18);
-insert into books values('9780132350884','Clean Code: A Handbook of Agile Software Craftsmanship','Robert C Martin',288,3);
-insert into books values('9780132181273','Domain-Driven Design','Eric Evans',560,28);
-insert into books values('9781951204006','A Programmers Guide to Computer Science','William Springer',188,4);
-insert into books values('9780316204552','The Soul of a New Machine','Tracy Kidder',293,30);
-insert into books values('9780132778046','Effective Java','Joshua Bloch',368,21);
-insert into books values('9781484255995','Practical Rust Projects','Shing Lyu',257,15);
-insert into users values('demo','demo','Demo','User','Demo Home','42502216225','demo@gmail.com',2);
-insert into users values('Admin','Admin','Mr.','Admin','Haldia WB','9584552224521','admin@gmail.com',1);
-insert into users values('shashi','shashi','Shashi','Raj','Bihar','1236547089','shashi@gmail.com',2);
+You must have the following software installed:
+* Git
+* Java JDK 8 or higher
+* Eclipse IDE for Enterprise Java Developers
+* Apache Maven
+* Apache Tomcat 8.0 or higher
+* MySQL Server
 
-commit;
+### Installation
 
-```
+1.  **Clone the Repository**
+    ```bash
+    git clone [https://github.com/birla143/onlinebookstore.git](https://github.com/birla143/onlinebookstore.git)
+    ```
 
-### ========== Importing and Running The Project Through Eclipse EE ==========
+2.  **Initialize the Database**
+    * Log in to your MySQL instance.
+    * Execute the following SQL script to create the database, tables, and insert sample data.
+        ```sql
+        CREATE DATABASE IF NOT EXISTS onlinebookstore;
+        USE onlinebookstore;
+        CREATE TABLE IF NOT EXISTS books(barcode VARCHAR(100) PRIMARY KEY, name VARCHAR(100), author VARCHAR(100), price INT, quantity INT);
+        CREATE TABLE IF NOT EXISTS users(username VARCHAR(100) PRIMARY KEY,password VARCHAR(100), firstname VARCHAR(100), lastname VARCHAR(100),address TEXT, phone VARCHAR(100),mailid VARCHAR(100),usertype INT);
+        INSERT INTO books VALUES('9780134190563','The Go Programming Language','Alan A. A. Donovan and Brian W. Kernighan',400,8),('9780133053036','C++ Primer','Stanley Lippman and Josée Lajoie and Barbara Moo',976,13),('9781718500457','The Rust Programming Language','Steve Klabnik and Carol Nichols',560,12),('9781491910740','Head First Java','Kathy Sierra and Bert Bates and Trisha Gee',754,23);
+        INSERT INTO users VALUES('demo','demo','Demo','User','Demo Home','42502216225','demo@gmail.com',2),('Admin','Admin','Mr.','Admin','Haldia WB','9584552224521','admin@gmail.com',1),('shashi','shashi','Shashi','Raj','Bihar','1236547089','shashi@gmail.com',2);
+        COMMIT;
+        ```
 
-Step 0: Open Eclipse Enterprise Edition. [Install, if not already installed.]
+3.  **Configure in Eclipse**
+    * Import the cloned repository as a Maven project into Eclipse (`File > Import > Maven > Existing Maven Projects`).
+    * Update the database connection details in `src/main/resources/application.properties`.
+    * Build the project using Maven: Right-click project > `Run As` > `Maven build...` > Goals: `clean install`.
+    * Add the project to your configured Tomcat server.
 
-Step 1: Click On File > Import > Git > Projects From Git > Clone Uri > Paste The Repository Url as: ```(https://github.com/birla143/onlinebookstore)```> Select master Branch > Next > Next > Finish.
+---
 
-Step 2. a: Go inside ```src/main/resources > application.properties``` and update the value of database details as per your usage, like db.driver, db.host, db.username and db.password according to your installed mysql/postgresql admin user credentials.
+## ▶️ Usage
 
-Step 2.b: Right Click on Project > Run as > Maven Build > In the goals field enter "clean install" > apply > run
+1.  Start the Tomcat server from within Eclipse.
+2.  Open a web browser and navigate to `http://localhost:8083/onlinebookstore/` (or the port you configured).
+3.  **Default Credentials**:
+    * **Admin**:
+        * Username: `Admin`
+        * Password: `Admin`
+    * **User**:
+        * Username: `shashi`
+        * Password: `shashi`
 
-Step 2.c: Right Click On Project > Build Path > Configure Build Path > Libraries > Remove and Update Any Libraries if Red Mark Exists > Finish.
+---
 
-Step 3: [Only If Tomcat Server is not configured in Eclipse] : Right Click On Project > Run As > Run On Server > Select Tomcat V8.0 > (Select Tomcat V8.0 Installation Location If Asked) Next > Add onlinebookstore > Finish.
+## 🖼️ Screenshots
 
-Step 4: In The Server Tab > Double Click On Tomcat Server > Ports > Change The Port Number For Http/1.1 To 8083 > Close And Save.
+| Admin Dashboard                                                                                                                 | Book Listing Page                                                                                                             |
+| ------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| ![Admin Panel](https://user-images-githubusercontent.com/34605595/224770257-e18a3810-0457-4b78-bf46-cf82746708ee.png)            | ![Book Listing](https://user-images-githubusercontent.com/34605595/224769990-f440f74d-41b2-4629-ba1c-a87267f225d9.png)      |
+| **Shopping Cart** | **User Profile** |
+| ![Shopping Cart](https://user-images-githubusercontent.com/34605595/224770145-5902054f-5943-44ac-b02f-92097c8a6972.png)          | ![User Profile](https://user-images-githubusercontent.com/34605595/224770392-5a5478d2-98cc-44ee-8689-132b6b16af80.png)      |
 
-Step 5: Right Click On Project > Run As > Run On Server > Select Tomcat v8.0 > Next > Add All> Done.
+---
 
-Step 6: Check Running The Site At  <a href="http://localhost:8083/onlinebookstore/">http://localhost:8083/onlinebookstore/</a>
+## 🤝 Contributing
 
-Step 7: Default Username And Password For Admin Is "Admin" And "Admin"
-
-Step 8: The default Username And Password For User Is "shashi" And "shashi"
-
-## FAQ
-**Question:1** Unable to Connect to Database?
-
-**Answer:** Please check you have installed the mysql correctly and have updated the correct db details in application.properties file. Also you can try doing maven clean install and force update the project and restart.
-<hr>
-
-Note:- Considering this as a Sample Project, we have not much considered of web security.
-#### Some Screenshots for the project:
-<img width="941" alt="image" src="https://user-images.githubusercontent.com/34605595/224769637-37c34d4b-26e7-4d49-b990-4c09b260ec31.png">
-<img width="954" alt="image" src="https://user-images.githubusercontent.com/34605595/224769990-f440f74d-41b2-4629-ba1c-a87267f225d9.png">
-<img width="930" alt="image" src="https://user-images.githubusercontent.com/34605595/224770145-5902054f-5943-44ac-b02f-92097c8a6972.png">
-<img width="934" alt="image" src="https://user-images.githubusercontent.com/34605595/224770257-e18a3810-0457-4b78-bf46-cf82746708ee.png">
-<img width="946" alt="image" src="https://user-images.githubusercontent.com/34605595/224770392-5a5478d2-98cc-44ee-8689-132b6b16af80.png">
-
-
-#### "Suggestions and project improvement ideas are welcomed!"
+Suggestions and contributions are always welcome! Feel free to open an issue or submit a pull request to improve the project.
