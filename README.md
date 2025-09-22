@@ -22,7 +22,8 @@ A full-stack online bookstore application built using Java, Servlets, JDBC, and 
 
 This project is a web-based bookstore designed to showcase the use of Java Servlets and JDBC for back-end development. It provides a platform for users to browse and purchase books, while administrators can manage the store's inventory and view sales data.
 
-![Online Bookstore Homepage](https://user-images-githubusercontent.com/34605595/137615096-8447d32d-bddc-4f13-a8ed-3c0f4dd5e04e.png)
+![onlinebookstore](https://user-images.githubusercontent.com/34605595/137615096-8447d32d-bddc-4f13-a8ed-3c0f4dd5e04e.png)
+
 
 ### Key Features
 
